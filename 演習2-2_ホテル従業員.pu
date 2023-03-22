@@ -1,0 +1,6 @@
+@startuml 演習2-2
+    left to right direction
+    actor 経営者  #DDDDDD;line:black;line.bold;
+    actor ホテル従業員  #DDDDDD;line:black;line.bold;
+    ホテル従業員 <|-- 経営者
+@enduml
