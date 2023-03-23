@@ -2,8 +2,8 @@
     ' left to right direction
     actor 出荷担当者 as a #DDDDDD;line:black;line.bold;
     rectangle 販売管理システム {
-    usecase 出荷状況登録 as b
-    usecase 注文商品確認 as c
+    usecase 出荷状況を登録する as b
+    usecase 注文商品を確認する as c
     }
     a --> b
     a --> c
