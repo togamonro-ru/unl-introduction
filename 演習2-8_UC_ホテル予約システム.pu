@@ -21,8 +21,8 @@ b<|---c
 c--->e
 b-->i
 f ...>(g) : <<extend>>
-g ..>(h) : <<extend>>
-e ..>(h) : <<extend>>
-i ..>(h) : <<extend>>
+g ..>(h) : <<include>>
+e ..>(h) : <<include>>
+i ..>(h) : <<include>>
 
 @enduml
