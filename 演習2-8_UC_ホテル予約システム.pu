@@ -1,0 +1,28 @@
+@startuml ユースケース図
+left to right direction
+
+     actor 利用者 as a #DDDDDD;line:black;line.bold;
+     actor 従業員 as b #DDDDDD;line:black;line.bold;
+     actor 管理者 as c #DDDDDD;line:black;line.bold;
+
+rectangle ホテル予約システム {
+usecase 空室状況を閲覧する as d
+usecase 予約の集計をする as e
+usecase 会員登録をする as f
+usecase (<u>予約</u>\n拡張点\nキャンペーン期間\n会員登録) as g
+usecase ログイン as h
+usecase 空室状況を入力する as i
+usecase キャンペーン as j
+}
+a--->f
+j ...>(g) : <<extend>>
+a--->d
+b<|---c
+c--->e
+b-->i
+f ...>(g) : <<extend>>
+g ..>(h) : <<extend>>
+e ..>(h) : <<extend>>
+i ..>(h) : <<extend>>
+
+@enduml
