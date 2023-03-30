@@ -1,0 +1,25 @@
+@startuml
+left to right direction
+class 利用者 as a{
+- 名前
+- 住所
+- 電話番号
+}
+class ホテル as b{
+- 部屋
+}
+class 部屋 as c{
+- タイプ
+- 価格
+- キャンペーン価格
+}
+class 予約 as d{
+- チェックイン日
+- 滞在期間
+- 値段
+}
+a-->b:> 会員
+b"1" o-down-"1..*"c
+a-->d:予約する >
+d "*"-down-"*"b
+@enduml

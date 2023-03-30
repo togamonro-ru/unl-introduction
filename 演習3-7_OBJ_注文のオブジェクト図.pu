@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+object "<u>高橋洋平: 重要顧客</u>" as a {
+
+}
+
+object "<u>注文: 注文クラス</u>" as b{
+}
+object "<u>高田利恵: 重要顧客</u>" as c {
+
+}
+object "<u>大坪直之 : 重要顧客</u>" as d{
+
+}
+object "<u>テレビ:商品</u>" as e{
+    型式V12345
+}
+object "<u>冷蔵庫:商品</u>" as f{
+    型式R8765
+}
+object "<u>プロジェクター:  商品</u>" as g{
+    型式P1122
+}
+
+
+a--b
+c--b
+b--e
+b--f
+@enduml
