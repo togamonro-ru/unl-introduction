@@ -1,0 +1,11 @@
+@startuml
+class "医師" as a
+class "医局" as b
+class "患者" as c
+class "診察記録" as d
+
+b "*" -- "*" a :所属
+a "1" -- "*" c :担当
+c --> d
+d -- a :記録
+@enduml
