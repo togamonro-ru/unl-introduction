@@ -6,6 +6,6 @@ class "診察記録" as d
 
 b "*" -- "*" a :所属
 a "1" -- "*" c :担当
-c --> d
+c -- d
 d -- a :記録
 @enduml

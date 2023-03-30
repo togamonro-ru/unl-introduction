@@ -4,7 +4,7 @@ class "派遣社員" as b
 class "契約社員" as c
 class "正社員" as d
 
-a <-- b
-a <-- c
-a <-- d
+a <|-- b
+a <|-- c
+a <|-- d
 @enduml
