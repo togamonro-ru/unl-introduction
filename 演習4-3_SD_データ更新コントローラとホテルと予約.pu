@@ -1,0 +1,14 @@
+@startuml
+hide footbox
+participant ":データ更新コントローラ" as a << controlle >>
+participant ":ホテル" as b <<hotel>>
+participant ":予約" as c
+mainframe sd データ更新コントローラとホテルと予約
+activate a
+a -> b :予約する()
+create c
+activate b
+b -> c:<<create>>
+b -> b :予約登録()
+activate b
+@enduml
