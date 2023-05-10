@@ -1,0 +1,12 @@
+@startuml
+state 部屋{
+state entry <<entryPoint>>
+state exit <<exitPoint>>
+entry -> 空室
+空室-down-> 予約済み
+予約済み-up-> 空室
+空室-right-> exit
+}
+[*] --> entry
+exit -> [*]
+@enduml
