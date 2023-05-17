@@ -1,0 +1,21 @@
+@startuml
+hide footbox
+Actor "<u>:客</u>" as a
+participant "<u>:料金装置</u>" as b
+participant "<u>:ボタン</u>" as c
+participant "<u>:ベンダー</u>" as d
+mainframe sd 自動販売機
+
+activate a
+a-->b:料金投入
+     activate b
+a<--b:投入金額表示
+     deactivate b
+ a-->c:ドリンク選択
+     activate c
+ c-->d:ドリンク種類伝達
+     deactivate c
+ activate d
+
+ a<--d:ドリンク引き渡し
+@enduml
