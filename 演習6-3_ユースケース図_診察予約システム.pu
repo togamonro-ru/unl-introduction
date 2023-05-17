@@ -1,42 +1,15 @@
-@startuml
+@startuml 例題1
 left to right direction
-actor 利用者 as User
-actor 看護師 as Nurse
-
-rectangle システム {
-usecase メニュー画面 as a
-usecase 予約と確認画面 as b
-usecase あなたの順番画面 as c
-usecase 今の順番画面 as d
-usecase 予約取り消し as e
-usecase 今の順番表示 as f
-usecase 名前と電話番号を入力 as g
-usecase 登録ボタンを押す as h
-usecase 自分の順番を確認 as i
-usecase 自分の順番を取り消す as j
-
-User -- a
-User -- b
-User -- c
-User -- d
-User --> e
-Nurse --> f
-
-  a --> b
-  b --> c
-  b --> d
-  b --> e
-
-User --> g
-User --> h
-User --> i
-User --> j
-
-g ..> b : <<include>>
-h ..> b : <<include>>
-i ..> c : <<include>>
-j ..> e : <<include>>
-f ..> d : <<include>>
+actor 利用者 as a
+actor 看護師 as b
+rectangle 診察予約システム {
+usecase 予約する as c
+usecase 自分の順番を確認する as d
+usecase 順番を取り消す as e
+usecase 今の番号を変更する as f
 }
-
+a-->c
+a-->d
+a-->e
+f<--b
 @enduml
