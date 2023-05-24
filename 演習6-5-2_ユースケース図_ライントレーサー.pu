@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+actor ユーザー as a
+actor 光センサ as b
+actor CPU as c
+rectangle ライントレーサー {
+usecase 電源を操作する as d
+usecase 明るさを判断する as e
+usecase 右モータを操作する as f
+usecase 左モータを操作する as g
+}
+a-->d
+b-->e
+b-->c
+c-->f
+c-->g
+@enduml

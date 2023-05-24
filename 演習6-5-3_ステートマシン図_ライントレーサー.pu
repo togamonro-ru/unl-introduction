@@ -1,0 +1,9 @@
+@startuml
+left to right direction
+state on{
+右モータOFF左モータON-right->右モータON左モータOFF: 暗い
+右モータOFF左モータON<-left-右モータON左モータOFF: 明るい
+}
+OFF-up->on: 電源ON
+OFF<-down-on: 電源OFF
+@enduml
