@@ -1,0 +1,15 @@
+@startuml カレーライス
+title カレーライスの作り方
+start
+:材料を買う;
+fork
+:野菜を切る;
+:肉を炒める;
+:野菜と肉とルー鍋に入れ煮込む;
+fork again
+:米を洗う;
+:米を炊く;
+end fork
+:盛り付ける;
+stop
+@enduml
